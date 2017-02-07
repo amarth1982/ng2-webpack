@@ -4,6 +4,8 @@
   "description": "ng2 webpack tester project",
   "main": "index.ts",
   "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anandha Marthandan",
@@ -28,9 +30,11 @@
   "devDependencies": {
     "@types/hammerjs": "^2.0.33",
     "@types/node": "^7.0.0",
+    "@types/requirejs": "^2.1.28",
     "angular2-template-loader": "^0.6.1",
     "awesome-typescript-loader": "^3.0.3",
     "html-loader": "^0.4.4",
+    "lite-server": "^2.2.2",
     "raw-loader": "^0.5.1",
     "tslib": "^1.5.0",
     "typescript": "^2.1.5",

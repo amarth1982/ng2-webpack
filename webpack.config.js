@@ -5,18 +5,20 @@ module.exports = {
         'vendor': './src/vendor.ts',
         'app': './src/main.ts'
     },
+    resolve: {
+      extensions: ['.ts', '.js', '.json']
+    },
     module: {
         rules: [
             {
                 test: /\.ts$/,
-                loaders: [{
-                    loader: 'awesome-typescript-loader',
-                    options: { configFileName: './tsconfig.json' }
-                }, 'angular2-template-loader']
+                loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+                exclude: [/node_modules/, /\.d\.td$/]
             },
             {
-                test: /\.html$/,
-                loader: 'html-loader'
+                test: /\.(html|css)$/,
+                loader: 'raw-loader',
+                exclude: /\.async\.(html|css)$/
             }
         ]
     },
